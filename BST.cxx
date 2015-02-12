@@ -76,19 +76,43 @@ private:
 	_BST_TREE_NODE<T> *root;
 	
 	void insert(_BST_TREE_NODE<T>*,T,int (BST_TREE::*p)(T,T));
-	void insert(_BST_TREE_NODE<T>*,T,int (*p)(T,T));
-	
+	void insert(_BST_TREE_NODE<T>*,T,int (*p)(T,T));	
 	int T_greater(T a, T b){return a>b;};
 	void in_order(_BST_TREE_NODE<T>*,std::vector<T> &);
+	bool is_full(_BST_TREE_NODE<T>*);
 public:
 	
 	BST_TREE(T);
 	
 	void insert(T value,int (*p)(T,T));	
 	void insert(T);
-	std::vector<T> in_order();	
+	std::vector<T> in_order();
+	bool is_full();	
 	
 };
+
+template<class T>
+bool BST_TREE<T>::is_full(_BST_TREE_NODE<T> *current){
+	
+	//base case both null
+	if(current->is_left_null() && !current->is_right_null()){
+			return true;
+	}
+	if(!current->is_left_null() && current->is_right_null()){
+			return false;
+	}
+	if(current->is_left_null() && current->is_right_null()){
+			return false;
+	}		
+	return this->is_full(current->get_left()) && this->is_full(current->get_rigt());
+	
+};
+
+template<class T>
+bool BST_TREE<T>::is_full(){
+	return this->is_full(this->root);
+};
+
 
 
 template<class T>
@@ -96,8 +120,6 @@ BST_TREE<T>::BST_TREE(T rooo){
 	this->root=new _BST_TREE_NODE<T>();
 	this->root->set_value(rooo);
 };
-
-
 
 /*INSERT FUNCTION WITH DEFAULT COMPARISON FUNCTION*/
 template<class T>
@@ -199,17 +221,19 @@ int main(int argc, char **argv)
 	tree.insert(1,&greater);
 	tree.insert(2,&greater);
 	tree.insert(4);
-	tree.insert(5,&greater);
-	
-	std::vector<int>aux=tree.in_order();
 	
 	
+	
+	/*
+	std::vector<int>aux=tree.in_order();	
 	std::vector<int>::iterator i=aux.begin();
 	
 	for(;i!=aux.end();i++){
 		printf("%d ",(*i));
 	}
+	*/
 	
+	printf("%d ",tree.is_full());
 	
 	
 	return 0;
