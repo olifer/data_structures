@@ -67,6 +67,10 @@ public:
 		return this->value;
 	};
 	
+	bool is_leaf(){
+		return this->is_left_null() && this->is_right_null();
+	};
+	
 };
 
 template<class T>
@@ -94,16 +98,19 @@ public:
 template<class T>
 bool BST_TREE<T>::is_full(_BST_TREE_NODE<T> *current){
 	
-	//base case both null
+	
 	if(current->is_left_null() && !current->is_right_null()){
-			return true;
+			return false;
 	}
+	
 	if(!current->is_left_null() && current->is_right_null()){
 			return false;
 	}
-	if(current->is_left_null() && current->is_right_null()){
-			return false;
-	}		
+	
+	if(current->is_leaf()){
+			return true;
+	}	
+		
 	return this->is_full(current->get_left()) && this->is_full(current->get_rigt());
 	
 };
@@ -217,10 +224,11 @@ int greater(int a, int b){
 
 int main(int argc, char **argv)
 {
-	BST_TREE<int> tree(3);
-	tree.insert(1,&greater);
-	tree.insert(2,&greater);
-	tree.insert(4);
+	BST_TREE<int> tree(3);		/*				(3)						*/
+	tree.insert(1,&greater);	/*			    / \						*/
+	//tree.insert(2,&greater);	/*			  (1) (4)						*/
+	tree.insert(4);				/*				\	\					*/
+	//tree.insert(5,&greater);	/*				(2)	(5)					*/
 	
 	
 	
