@@ -84,6 +84,7 @@ private:
 	int T_greater(T a, T b){return a>b;};
 	void in_order(_BST_TREE_NODE<T>*,std::vector<T> &);
 	bool is_full(_BST_TREE_NODE<T>*);
+	T sum_leafs_value(_BST_TREE_NODE<T>*,T(*_P_)(T,T),void (*_I_)(T *));
 public:
 	
 	BST_TREE(T);
@@ -92,7 +93,36 @@ public:
 	void insert(T);
 	std::vector<T> in_order();
 	bool is_full();	
+	T sum_leafs_value(T(*_P_)(T,T),void (*_I_)(T *));
 	
+};
+
+template<class T>
+T BST_TREE<T>::sum_leafs_value(_BST_TREE_NODE<T> *current,T (*_P_)(T,T),void (*_I_)(T *)){
+	
+	 T sum;	
+	_I_(&sum);
+	
+	
+	if(current->is_leaf()){		
+		sum=_P_(sum,current->get_value());
+	}else{
+		
+		if(current->is_left_null()){
+			sum=_P_(sum,sum_leafs_value(current->get_rigt(),_P_,_I_));
+		}
+		
+		if(current->is_right_null()){
+			sum=_P_(sum,sum_leafs_value(current->get_left(),_P_,_I_));
+		}
+	}
+	 
+	return sum;	
+};
+
+template<class T>
+T BST_TREE<T>::sum_leafs_value(T (*_P_)(T,T), void (*_I_)(T *)){
+	return this->sum_leafs_value(this->root,_P_,_I_);
 };
 
 template<class T>
@@ -222,14 +252,23 @@ int greater(int a, int b){
 };
 
 
+void init(int *val){
+	*val=0;
+};
+
+int sum(int a, int b){
+	return a+b;
+}
+
+
+
 int main(int argc, char **argv)
 {
-	BST_TREE<int> tree(3);		/*				(3)						*/
+	BST_TREE<int> tree(2);		/*				(2)						*/
 	tree.insert(1,&greater);	/*			    / \						*/
-	//tree.insert(2,&greater);	/*			  (1) (4)						*/
-	tree.insert(4);				/*				\	\					*/
+	tree.insert(3,&greater);	/*			  (1) (3)						*/
+	//tree.insert(4);				/*			\	\					*/
 	//tree.insert(5,&greater);	/*				(2)	(5)					*/
-	
 	
 	
 	/*
@@ -241,7 +280,7 @@ int main(int argc, char **argv)
 	}
 	*/
 	
-	printf("%d ",tree.is_full());
+	printf("\n%d ",tree.sum_leafs_value(&sum,&init));
 	
 	
 	return 0;
