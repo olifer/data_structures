@@ -6,7 +6,7 @@
 #include <iostream>
 #include <string.h>
 #include <cstdio>
-
+#include <ostream>
 
 
 
@@ -56,6 +56,10 @@ public:
       return this->nodes.end();
     };
 
+    _TRIE_NODE_::NODES_ITERATOR begin(){
+        return this->nodes.begin();
+    };
+
     void add(T value){
         _TRIE_NODE_<T> neu;
 
@@ -80,11 +84,13 @@ private:
     _TRIE_NODE_<T> root;
     void insert(_TRIE_NODE_<T>*,T *,int pos);
     bool contains(_TRIE_NODE_<T>,T *,int pos);
+    std::ostream& print(_TRIE_NODE_<T>,std::ostream &);
 
 public:
     _TRIE_NODE_<T> get_root();
     void insert(T *node);
     bool contains(T *look);
+    std::ostream& print(std::ostream &out);
 
     trie(){
         std::map<T,_TRIE_NODE_<T> > nodes;
@@ -160,7 +166,6 @@ void trie<T>::insert(_TRIE_NODE_<T> *current, T *value_array, int pos) {
             where=current->contains(aux);
         }
 
-
         int nespos=pos+1;
 
         this->insert(&(*where).second, value_array, nespos);
@@ -170,7 +175,32 @@ void trie<T>::insert(_TRIE_NODE_<T> *current, T *value_array, int pos) {
 
 };
 
+template <class T>
+std::ostream& trie<T>::print(_TRIE_NODE_<T> current,std::ostream & out) {
 
+    if(!current.is_leaf()){
+        //only traverse the trie if its not a leaf
+
+        out<<current.get_value()<<" ";
+
+        typename std::map<T,_TRIE_NODE_<T> >::iterator  iter=current.begin();
+
+        for(;iter!=current.end();iter++){
+            print((*iter).second, out);
+        }
+
+
+
+    }
+
+    return out;
+}
+
+template <class T>
+std::ostream& trie<T>::print(std::ostream &out) {
+    this->print(this->root,out);
+    return out;
+}
 
 template <class T>
 void trie<T>::insert(T *value_array) {

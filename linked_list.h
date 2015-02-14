@@ -168,35 +168,3 @@ void linked_list<T>::print(){
 
 
 
-int equal(int a, int b){
-	return a==b;
-};
-
-
-int ole(int a,int b){
-	return a!=b;
-}
-
-
-int main(int argc, char **argv)
-{
-	linked_list<int> list;
-	
-	for(int i=0;i<10;i++){
-		list.push_back(i);
-	}
-	
-	
-	int (*p)(int,int);
-	p = &equal;	
-	
-	printf("%d ",list.contains(150,&ole));
-	printf("%d ",list.contains(1,p));
-	printf("%d ",list.contains(2,p));
-	
-	
-	
-	
-	return 0;
-}
-

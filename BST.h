@@ -261,28 +261,3 @@ int sum(int a, int b){
 }
 
 
-
-int main(int argc, char **argv)
-{
-	BST_TREE<int> tree(2);		/*				(2)						*/
-	tree.insert(1,&greater);	/*			    / \						*/
-	tree.insert(3,&greater);	/*			  (1) (3)						*/
-	//tree.insert(4);				/*			\	\					*/
-	//tree.insert(5,&greater);	/*				(2)	(5)					*/
-	
-	
-	/*
-	std::vector<int>aux=tree.in_order();	
-	std::vector<int>::iterator i=aux.begin();
-	
-	for(;i!=aux.end();i++){
-		printf("%d ",(*i));
-	}
-	*/
-	
-	printf("\n%d ",tree.sum_leafs_value(&sum,&init));
-	
-	
-	return 0;
-}
-

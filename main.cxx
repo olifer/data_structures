@@ -18,11 +18,14 @@ int main(int argc, char **argv)
 
     trie.insert(pedo);
 
-    char olep[]="olep";
+    char olep[]="ole";
 
-    printf("%s is in ?= %d\n",aux,trie.contains(aux));
-    printf("%s is in ?= %d\n",pedo,trie.contains(pedo));
+   // printf("%s is in ?= %d\n",aux,trie.contains(aux));
+   // printf("%s is in ?= %d\n",pedo,trie.contains(pedo));
     printf("%s is in ?= %d\n",olep,trie.contains(olep));
+
+
+    trie.print(std::cout);
 
     return 0;
 }
