@@ -94,6 +94,7 @@ public:
 	std::vector<T> in_order();
 	bool is_full();	
 	T sum_leafs_value(T(*_P_)(T,T),void (*_I_)(T *));
+
 	
 };
 
@@ -234,8 +235,6 @@ void BST_TREE<T>::in_order(_BST_TREE_NODE<T> *current,std::vector<T> &res){
 	if(!current->is_right_null()){
 		BST_TREE::in_order(current->get_rigt(),res);
 	}
-	
-	
 };
 
 template<class T>
