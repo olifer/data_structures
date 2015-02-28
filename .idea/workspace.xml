@@ -10,10 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f0fc26d-fb5a-4c17-9c10-8af1639ac641" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/red_black_tree.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main" afterPath="$PROJECT_DIR$/main" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BST.h" afterPath="$PROJECT_DIR$/BST.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cxx" afterPath="$PROJECT_DIR$/main.cxx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/trie.h" afterPath="$PROJECT_DIR$/trie.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Data_Structures.iws" />
@@ -35,15 +34,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="BST.h" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/BST.h">
+      <file leaf-file-name="red_black_tree.h" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/red_black_tree.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.48051947">
-              <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+            <state vertical-scroll-proportion="-1.7228413">
+              <caret line="179" column="23" selection-start-line="179" selection-start-column="23" selection-end-line="179" selection-end-column="23" />
               <folding>
-                <element signature="e#7095#7104#0" expanded="true" />
-                <element signature="e#7251#7260#0" expanded="true" />
-                <element signature="e#7957#7966#0" expanded="true" />
+                <element signature="e#657#666#0" expanded="true" />
+                <element signature="e#2183#2192#0" expanded="true" />
+                <element signature="e#3213#3222#0" expanded="true" />
+                <element signature="e#6237#6246#0" expanded="true" />
+                <element signature="e#6358#6367#0" expanded="true" />
+                <element signature="e#7124#7133#0" expanded="true" />
+                <element signature="e#8290#8299#0" expanded="true" />
+                <element signature="e#9127#9136#0" expanded="true" />
+                <element signature="e#9641#9650#0" expanded="true" />
+                <element signature="e#10749#10758#0" expanded="true" />
+                <element signature="e#10947#10956#0" expanded="true" />
+                <element signature="e#11056#11065#0" expanded="true" />
+                <element signature="e#11613#11622#0" expanded="true" />
+                <element signature="e#12092#12101#0" expanded="true" />
+                <element signature="e#12232#12241#0" expanded="true" />
+                <element signature="e#12628#12637#0" expanded="true" />
+                <element signature="e#12718#12727#0" expanded="true" />
+                <element signature="e#12919#12928#0" expanded="true" />
+                <element signature="e#13637#13646#0" expanded="true" />
+                <element signature="e#13783#13792#0" expanded="true" />
+                <element signature="e#13945#13954#0" expanded="true" />
+                <element signature="e#14867#14876#0" expanded="true" />
+                <element signature="e#15821#15830#0" expanded="true" />
+                <element signature="e#16518#16527#0" expanded="true" />
+                <element signature="e#16621#16630#0" expanded="true" />
+                <element signature="e#16939#16948#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -53,7 +75,7 @@
         <entry file="file://$PROJECT_DIR$/main.cxx">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="31" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
+              <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -70,8 +92,9 @@
         <option value="$PROJECT_DIR$/linked_list.h" />
         <option value="$PROJECT_DIR$/trie.h" />
         <option value="$PROJECT_DIR$/../../SWENG-510/ProjectNum2/LLVM_built/cs510student10/project2/llvm/lib/Transforms/CallGraphPass/CallGraphPass.cpp" />
-        <option value="$PROJECT_DIR$/main.cxx" />
         <option value="$PROJECT_DIR$/BST.h" />
+        <option value="$PROJECT_DIR$/main.cxx" />
+        <option value="$PROJECT_DIR$/red_black_tree.h" />
       </list>
     </option>
   </component>
@@ -190,17 +213,25 @@
       <option name="number" value="Default" />
       <updated>1423943829929</updated>
     </task>
+    <task id="LOCAL-00001" summary="complet BST">
+      <created>1425140098506</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1425140098506</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="1431" y="24" width="1615" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21511018" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.10897833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20371518" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -230,9 +261,13 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="complet BST" />
+    <option name="LAST_COMMIT_MESSAGE" value="complet BST" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -241,9 +276,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#7095#7104#0" expanded="true" />
-            <element signature="e#7251#7260#0" expanded="true" />
-            <element signature="e#7957#7966#0" expanded="true" />
+            <element signature="e#7095#7104#0" expanded="false" />
+            <element signature="e#7251#7260#0" expanded="false" />
+            <element signature="e#7957#7966#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -253,9 +288,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="137" column="8" selection-start-line="137" selection-start-column="8" selection-end-line="137" selection-end-column="8" />
           <folding>
-            <element signature="e#7095#7104#0" expanded="true" />
-            <element signature="e#7251#7260#0" expanded="true" />
-            <element signature="e#7957#7966#0" expanded="true" />
+            <element signature="e#7095#7104#0" expanded="false" />
+            <element signature="e#7251#7260#0" expanded="false" />
+            <element signature="e#7957#7966#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -265,9 +300,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="137" column="8" selection-start-line="137" selection-start-column="8" selection-end-line="137" selection-end-column="8" />
           <folding>
-            <element signature="e#7095#7104#0" expanded="true" />
-            <element signature="e#7251#7260#0" expanded="true" />
-            <element signature="e#7957#7966#0" expanded="true" />
+            <element signature="e#7095#7104#0" expanded="false" />
+            <element signature="e#7251#7260#0" expanded="false" />
+            <element signature="e#7957#7966#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -277,9 +312,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#7095#7104#0" expanded="true" />
-            <element signature="e#7251#7260#0" expanded="true" />
-            <element signature="e#7957#7966#0" expanded="true" />
+            <element signature="e#7095#7104#0" expanded="false" />
+            <element signature="e#7251#7260#0" expanded="false" />
+            <element signature="e#7957#7966#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -289,9 +324,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="128" column="0" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
           <folding>
-            <element signature="e#7095#7104#0" expanded="true" />
-            <element signature="e#7251#7260#0" expanded="true" />
-            <element signature="e#7957#7966#0" expanded="true" />
+            <element signature="e#7095#7104#0" expanded="false" />
+            <element signature="e#7251#7260#0" expanded="false" />
+            <element signature="e#7957#7966#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -387,22 +422,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/BST.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.56">
+          <caret line="17" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="541" selection-end-column="0" />
+          <folding>
+            <element signature="e#7095#7104#0" expanded="false" />
+            <element signature="e#7251#7260#0" expanded="false" />
+            <element signature="e#7957#7966#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.cxx">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="31" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
+          <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BST.h">
+    <entry file="file://$PROJECT_DIR$/red_black_tree.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48051947">
-          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+        <state vertical-scroll-proportion="-1.7228413">
+          <caret line="179" column="23" selection-start-line="179" selection-start-column="23" selection-end-line="179" selection-end-column="23" />
           <folding>
-            <element signature="e#7095#7104#0" expanded="true" />
-            <element signature="e#7251#7260#0" expanded="true" />
-            <element signature="e#7957#7966#0" expanded="true" />
+            <element signature="e#657#666#0" expanded="true" />
+            <element signature="e#2183#2192#0" expanded="true" />
+            <element signature="e#3213#3222#0" expanded="true" />
+            <element signature="e#6237#6246#0" expanded="true" />
+            <element signature="e#6358#6367#0" expanded="true" />
+            <element signature="e#7124#7133#0" expanded="true" />
+            <element signature="e#8290#8299#0" expanded="true" />
+            <element signature="e#9127#9136#0" expanded="true" />
+            <element signature="e#9641#9650#0" expanded="true" />
+            <element signature="e#10749#10758#0" expanded="true" />
+            <element signature="e#10947#10956#0" expanded="true" />
+            <element signature="e#11056#11065#0" expanded="true" />
+            <element signature="e#11613#11622#0" expanded="true" />
+            <element signature="e#12092#12101#0" expanded="true" />
+            <element signature="e#12232#12241#0" expanded="true" />
+            <element signature="e#12628#12637#0" expanded="true" />
+            <element signature="e#12718#12727#0" expanded="true" />
+            <element signature="e#12919#12928#0" expanded="true" />
+            <element signature="e#13637#13646#0" expanded="true" />
+            <element signature="e#13783#13792#0" expanded="true" />
+            <element signature="e#13945#13954#0" expanded="true" />
+            <element signature="e#14867#14876#0" expanded="true" />
+            <element signature="e#15821#15830#0" expanded="true" />
+            <element signature="e#16518#16527#0" expanded="true" />
+            <element signature="e#16621#16630#0" expanded="true" />
+            <element signature="e#16939#16948#0" expanded="true" />
           </folding>
         </state>
       </provider>
