@@ -14,30 +14,39 @@ int compare(char *a,char*b){
     return abs(strcmp(a,b));
 };
 
+int greater_char(char a,char b){
+    return a<b;
+}
+
 int main(int argc, char **argv)
 {
 
-  //
-    char aux[]="santiago";
-    char pedo[]="ole";
-    char olep[]="cristina";
-    char jorge[]="a";
+    BST_TREE<char> tree('f');
+
+    tree.insert_iterative('b');
+    tree.insert_iterative('g');
+    tree.insert_iterative('a');
+    tree.insert_iterative('d');
+    tree.insert_iterative('c');
+    tree.insert_iterative('e');
+    tree.insert_iterative('i');
+    tree.insert_iterative('h');
 
 
 
-        trie<char> trie;
-        trie.insert(aux);
-        trie.insert(pedo);
-        trie.insert(olep);
-        trie.insert(jorge);
+    std::vector<char> post=tree.in_order();
 
 
-    printf("%s is in ?= %d\n",aux,trie.contains(aux));
-    printf("%s is in ?= %d\n",pedo,trie.contains(pedo));
-    printf("%s is in ?= %d\n",olep,trie.contains(olep));
-    printf("%s is in ?= %d\n",jorge,trie.contains(jorge));
 
-    trie.print(std::cout);
+
+    std::vector<char>::iterator i=post.begin();
+
+    while(i!=post.end()){
+        printf(" %c ",(*i));
+        i++;
+    }
+
+    //printf("%d\n",tree.find_second_largest());
 
     return 0;
 }

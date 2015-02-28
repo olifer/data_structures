@@ -184,11 +184,12 @@ std::ostream& trie<T>::print(_TRIE_NODE_<T> current,std::ostream & out) {
         out<<current.get_value()<<" ";
 
         typename std::map<T,_TRIE_NODE_<T> >::iterator  iter=current.begin();
-
+		
+		
         for(;iter!=current.end();iter++){
             print((*iter).second, out);
         }
-
+		
 
 
     }
