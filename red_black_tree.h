@@ -174,16 +174,14 @@ template<class T>
 void RB_TREE<T>::fix_insertion(_RB_NODE<T> *x) {
     //This is the first step to have balanced red black tree
 
-    x->make_red();
+    while (!x->is_parent_null() && x->get_parent()->is_red()) {
 
-if(!x->is_parent_null() && x->get_parent()->is_red()) {
-    printf("Fixing\n");
-    while (x != this->root && x->is_red()) {
         if (!x->is_parent_null() && !x->get_parent()->is_parent_null()) {
 
             if (x->get_parent() == x->get_parent()->get_parent()->get_left()) {
                 //the parent is on the left
                 if (!x->get_parent()->get_parent()->is_right_null()) {
+
                     _RB_NODE<T> *uncle = x->get_parent()->get_parent()->get_rigt();
 
                     if (uncle->is_red()) {
@@ -197,10 +195,15 @@ if(!x->is_parent_null() && x->get_parent()->is_red()) {
                         x = x->get_parent()->get_parent();
 
 
-                    } else if (!x->get_parent()->is_right_null() && x == x->get_parent()->get_rigt()) {
-                        //X is on the right of his parent
-                        //case 2
-                        this->left_rotation(x->get_parent());
+                    } else {
+
+                        if (!x->get_parent()->is_right_null() && x == x->get_parent()->get_rigt()) {
+                            //X is on the right of his parent
+                            //case 2
+                            x=x->get_parent();
+                            this->left_rotation(x->get_parent());
+
+                        }
 
 
                         //case 3
@@ -234,11 +237,14 @@ if(!x->is_parent_null() && x->get_parent()->is_red()) {
                         x = x->get_parent()->get_parent();
 
 
-                    } else if (!x->get_parent()->is_left_null() && x == x->get_parent()->get_left()) {
-                        //X is on the right of his parent
-                        //case 2
-                        this->right_rotation(x->get_parent());
+                    } else {
+                        if (!x->get_parent()->is_left_null() && x == x->get_parent()->get_left()) {
+                            //X is on the right of his parent
+                            //case 2
+                            x=x->get_parent();
+                            this->right_rotation(x->get_parent());
 
+                        }
 
                         //case 3
 
@@ -247,6 +253,8 @@ if(!x->is_parent_null() && x->get_parent()->is_red()) {
 
                         this->left_rotation(x->get_parent()->get_parent());
 
+
+                    }
                     }
 
 
@@ -258,9 +266,6 @@ if(!x->is_parent_null() && x->get_parent()->is_red()) {
 
         }
 
-
-    }
-}
 
     this->root->make_black();
 
@@ -597,6 +602,7 @@ void RB_TREE<T>::insert(_RB_NODE<T> *nodel,T val,int (RB_TREE::*_P_)(T,T)){
             nodea->set_parent(nodel);
             nodea->set_value(val);
             nodel->set_rigt(nodea);
+            this->fix_insertion(nodea);
 
         }else{
             RB_TREE::insert(nodel->get_rigt(),val,_P_);
@@ -609,6 +615,7 @@ void RB_TREE<T>::insert(_RB_NODE<T> *nodel,T val,int (RB_TREE::*_P_)(T,T)){
             nodea->set_parent(nodel);
             nodea->set_value(val);
             nodel->set_left(nodea);
+            this->fix_insertion(nodea);
         }else{
             RB_TREE::insert(nodel->get_left(),val,_P_);
         }
@@ -721,6 +728,7 @@ void RB_TREE<T>::insert(_RB_NODE<T> *nodel,T val,int (*_P_)(T,T)){
             nodea->set_value(val);
             nodea->set_parent(nodel);
             nodel->set_rigt(nodea);
+            this->fix_insertion(nodea);
         }else{
             RB_TREE::insert(nodel->get_rigt(),val,_P_);
         }
@@ -731,6 +739,7 @@ void RB_TREE<T>::insert(_RB_NODE<T> *nodel,T val,int (*_P_)(T,T)){
             nodea->set_value(val);
             nodea->set_parent(nodel);
             nodel->set_left(nodea);
+            this->fix_insertion(nodea);
         }else{
             RB_TREE::insert(nodel->get_left(),val,_P_);
         }

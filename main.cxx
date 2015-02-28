@@ -23,22 +23,25 @@ int main(int argc, char **argv)
 {
 
     /*
-    For the right rotation, we look at left child of current.
-                   (6)                  (3)
-                  /  \                 /   \
-                (3)   (7)  >>>>>      (2)  (6)
-               /  \                        / \
-              (2) (4)                    (4) (7)
+
+                    (4)
+                   /   \
+                 (2)   (6)
+                /  \   /  \
+              (1) (3)(5)  (7)
+                            \
+                             (8)
      */
 
-    RB_TREE<int> tree(3);
-
+    RB_TREE<int> tree(4);
     tree.insert_iterative(2);
     tree.insert_iterative(6);
-    tree.insert_iterative(4);
+
     tree.insert_iterative(7);
-
-
+    tree.insert_iterative(1);
+    tree.insert_iterative(5);
+    tree.insert_iterative(3);
+    tree.insert_iterative(8);
 
     std::vector<int> post=tree.in_order();
 
