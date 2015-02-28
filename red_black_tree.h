@@ -158,6 +158,7 @@ public:
     std::vector<T> in_order();
     std::vector<T> pre_order();
     std::vector<T> post_order();
+    std::vector<T> by_levels();
 
     bool is_full();
     T sum_leafs_value(T(*_P_)(T,T),void (*_I_)(T *));
@@ -166,8 +167,35 @@ public:
     void insert_iterative(T);
     void insert_iterative(T,int(*)(T,T));
 
-
 };
+
+
+template<class T>
+std::vector<T> RB_TREE<T>::by_levels() {
+    std::vector<T> ret;
+    std::queue<_RB_NODE<T> *> rec;
+
+    rec.push(this->root);
+
+    while(!rec.empty()){
+        _RB_NODE<T> *aux=rec.front();
+        rec.pop();
+
+        ret.push_back(aux->get_value());
+
+        if(!aux->is_left_null()){
+            rec.push(aux->get_left());
+        }
+
+        if(!aux->is_right_null()){
+            rec.push(aux->get_rigt());
+        }
+
+    }
+
+    return ret;
+};
+
 
 
 template<class T>

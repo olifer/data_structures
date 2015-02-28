@@ -43,7 +43,7 @@ int main(int argc, char **argv)
     tree.insert_iterative(3);
     tree.insert_iterative(8);
 
-    std::vector<int> post=tree.in_order();
+    std::vector<int> post=tree.by_levels();
 
 
 
