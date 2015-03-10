@@ -151,6 +151,35 @@ private:
 
 public:
 
+
+    class iterator{
+
+    private:
+        _RB_NODE<T> *current;
+        bool v_left;
+        bool v_right;
+
+
+
+    public:
+        iterator();
+        T get_value();
+        RB_TREE<T>::iterator operator =(RB_TREE<T>::iterator neu);
+        _RB_NODE<T> * operator=(_RB_NODE<T> *aux);
+
+        void go_left();
+        void go_right();
+        void go_parent();
+
+        bool has_parent();
+        bool has_left();
+        bool has_right();
+
+
+    };
+
+
+
     RB_TREE(T);
 
     void insert(T value,int (*p)(T,T));
@@ -166,9 +195,89 @@ public:
     bool super_balanced();
     void insert_iterative(T);
     void insert_iterative(T,int(*)(T,T));
+    iterator begin();
+
+
+
+
 
 };
 
+template <class T>
+bool RB_TREE<T>::iterator::has_parent() {
+    return !this->current->is_parent_null();
+}
+
+template<class T>
+void RB_TREE<T>::iterator::go_parent() {
+    if(!this->current->is_parent_null()){
+        (*this)=this->current->get_parent();
+    }
+}
+
+
+template<class T>
+bool RB_TREE<T>::iterator::has_left() {
+    return !this->current->is_left_null();
+}
+
+template<class T>
+bool RB_TREE<T>::iterator::has_right() {
+    return !this->current->is_right_null();
+}
+
+template<class T>
+void RB_TREE<T>::iterator::go_right() {
+    if(!this->current->is_right_null()){
+        (*this)=this->current->get_rigt();
+    }
+}
+
+template<class T>
+void RB_TREE<T>::iterator::go_left() {
+    if(!this->current->is_left_null()){
+        (*this)=this->current->get_left();
+    }
+}
+
+template<class T>
+_RB_NODE<T>* RB_TREE<T>::iterator::operator=(_RB_NODE<T> *aux) {
+    this->current=aux;
+
+    return this->current;
+}
+
+template<class T>
+typename RB_TREE<T>::iterator RB_TREE<T>::iterator::operator=(RB_TREE<T>::iterator neu) {
+    this->current=neu.current;
+    return (*this);
+}
+
+template<class T>
+RB_TREE<T>::iterator::iterator() {
+    this->current = new _RB_NODE<T>();
+    this->v_left=false;
+    this->v_right=false;
+
+
+};
+
+template<class T>
+T RB_TREE<T>::iterator::get_value() {
+    return this->current->get_value();
+}
+
+
+
+template <class T>
+typename RB_TREE<T>::iterator RB_TREE<T>::begin() {
+
+    typename RB_TREE<T>::iterator neu;
+
+    neu=this->root;
+
+    return neu;
+}
 
 template<class T>
 std::vector<T> RB_TREE<T>::by_levels() {
@@ -284,14 +393,8 @@ void RB_TREE<T>::fix_insertion(_RB_NODE<T> *x) {
 
                     }
                     }
-
-
                 }
-
-
             }
-
-
         }
 
 
