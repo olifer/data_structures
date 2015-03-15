@@ -66,6 +66,8 @@ public:
 	T operator[](int pos);
 	int size();
 	unsigned int contains(T lup,int (*p)(T, T));
+
+	T mToLastElement(int );
 	
 	
 };
@@ -76,6 +78,37 @@ linked_list<T>::linked_list(){
 	this->back=new node<T>();
 	this->tam=0;
 };
+
+
+template<class T>
+T linked_list<T>::mToLastElement(int m) {
+
+	if(m>this->size()){
+		throw "Out of bouns exception";
+	}
+
+
+	node<T> *front=this->head,*mpointer=this->head;
+
+
+	while(m-- && mpointer->next !=0x0){
+		mpointer=mpointer->next;
+	}
+
+
+	while(mpointer->next !=0x0){
+		mpointer=mpointer->next;
+		front=front->next;
+	}
+
+	front=front->next;
+
+	return front->get_value();
+
+}
+
+
+
 
 
 

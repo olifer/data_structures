@@ -22,41 +22,32 @@ int greater_char(char a,char b){
 int main(int argc, char **argv)
 {
 
-    /*
-
-                    (4)
-                   /   \
-                 (2)   (6)
-                /  \   /  \
-              (1) (3)(5)  (7)
-                            \
-                             (8)
-     */
-
-    RB_TREE<int> tree(4);
-    tree.insert_iterative(2);
-    tree.insert_iterative(6);
-
-    tree.insert_iterative(7);
-    tree.insert_iterative(1);
-    tree.insert_iterative(5);
-    tree.insert_iterative(3);
-    tree.insert_iterative(8);
-
-    std::vector<int> post=tree.in_order();
-    RB_TREE<int>::iterator aux=tree.begin();
 
 
 
+    linked_list<int> list;
 
-    std::vector<int>::iterator i=post.begin();
+    list.push_back(1);
+    list.push_back(2);
+    list.push_back(3);
+    list.push_back(4);
+    list.push_back(5);
+    list.push_back(6);
+    list.push_back(7);
+    list.push_back(8);
+    list.push_back(9);
 
-    while(i!=post.end()){
-        printf("%d ",(*i));
-        i++;
+
+
+    try{
+        printf("%d ",list.mToLastElement(1000));
+    }catch(std::string e){
+        printf("%s",e.c_str());
     }
 
-    //printf("%d\n",tree.find_second_largest());
+
+
+
 
     return 0;
 }
