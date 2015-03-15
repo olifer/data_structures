@@ -9,14 +9,14 @@
 #include "red_black_tree.h"
 #include "linked_list.h"
 #include "trie.h"
-
+#include "heap.h"
 
 int compare(char *a,char*b){
     return abs(strcmp(a,b));
 };
 
-int greater_char(char a,char b){
-    return a<b;
+unsigned int greater_char(int a,int b){
+    return a>=b;
 }
 
 int main(int argc, char **argv)
@@ -25,27 +25,22 @@ int main(int argc, char **argv)
 
 
 
-    linked_list<int> list;
+    heap<int> heap;
+    //heap.insert(1,&greater_char);
 
-    list.push_back(1);
-    list.push_back(2);
-    list.push_back(3);
-    list.push_back(4);
-    list.push_back(5);
-    list.push_back(6);
-    list.push_back(7);
-    list.push_back(8);
-    list.push_back(9);
+    heap.insert(6,&greater_char);
+    heap.insert(5,&greater_char);
+    heap.insert(9,&greater_char);
+    heap.insert(8,&greater_char);
+    heap.insert(-4,&greater_char);
 
+    printf(" %d ",heap.peek());
 
+    heap.remove();
 
-    try{
-        printf("%d ",list.mToLastElement(1000));
-    }catch(std::string e){
-        printf("%s",e.c_str());
-    }
+    heap.insert(3,&greater_char);
 
-
+    printf(" %d ",heap.peek());
 
 
 

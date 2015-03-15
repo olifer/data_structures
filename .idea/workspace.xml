@@ -10,8 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f0fc26d-fb5a-4c17-9c10-8af1639ac641" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/heap.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main" afterPath="$PROJECT_DIR$/main" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/linked_list.h" afterPath="$PROJECT_DIR$/linked_list.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cxx" afterPath="$PROJECT_DIR$/main.cxx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -34,45 +34,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="red_black_tree.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/red_black_tree.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="197" column="13" selection-start-line="197" selection-start-column="13" selection-end-line="197" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="linked_list.h" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/linked_list.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.17283951">
-              <caret line="95" column="5" selection-start-line="95" selection-start-column="5" selection-end-line="95" selection-end-column="5" />
-              <folding>
-                <element signature="e#1503#1512#0" expanded="true" />
-                <element signature="e#1884#1893#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="BST.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BST.h">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="29" column="21" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
+              <caret line="356" column="12" selection-start-line="356" selection-start-column="12" selection-end-line="356" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.cxx" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.cxx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cxx">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="42" column="45" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
+            <state vertical-scroll-proportion="0.6296296">
+              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="heap.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/heap.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="49" column="39" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
+              <folding>
+                <element signature="e#29#38#0" expanded="true" />
+                <element signature="e#487#496#0" expanded="true" />
+                <element signature="e#641#650#0" expanded="true" />
+                <element signature="e#1014#1023#0" expanded="true" />
+                <element signature="e#1184#1193#0" expanded="true" />
+                <element signature="e#2115#2124#0" expanded="true" />
+                <element signature="e#2185#2194#0" expanded="true" />
+                <element signature="e#2312#2321#0" expanded="true" />
+                <element signature="e#2656#2665#0" expanded="true" />
+                <element signature="e#2772#2781#0" expanded="true" />
+                <element signature="e#2888#2897#0" expanded="true" />
+                <element signature="e#2975#2984#0" expanded="true" />
+                <element signature="e#3064#3073#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -89,8 +90,9 @@
         <option value="$PROJECT_DIR$/../../SWENG-510/ProjectNum2/LLVM_built/cs510student10/project2/llvm/lib/Transforms/CallGraphPass/CallGraphPass.cpp" />
         <option value="$PROJECT_DIR$/BST.h" />
         <option value="$PROJECT_DIR$/red_black_tree.h" />
-        <option value="$PROJECT_DIR$/main.cxx" />
         <option value="$PROJECT_DIR$/linked_list.h" />
+        <option value="$PROJECT_DIR$/heap.h" />
+        <option value="$PROJECT_DIR$/main.cxx" />
       </list>
     </option>
   </component>
@@ -240,13 +242,20 @@
       <option name="project" value="LOCAL" />
       <updated>1426011364018</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="New methods for linked list">
+      <created>1426446503744</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1426446503744</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="1431" y="24" width="1615" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -261,7 +270,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -283,7 +291,8 @@
     <MESSAGE value="Red_Black_trees" />
     <MESSAGE value="Red_Black_tree completed" />
     <MESSAGE value="Red Black tree iterator" />
-    <option name="LAST_COMMIT_MESSAGE" value="Red Black tree iterator" />
+    <MESSAGE value="New methods for linked list" />
+    <option name="LAST_COMMIT_MESSAGE" value="New methods for linked list" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -454,13 +463,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/trie.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="201" column="32" selection-start-line="201" selection-start-column="32" selection-end-line="201" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../SWENG-510/ProjectNum2/LLVM_built/cs510student10/project2/llvm/lib/Transforms/CallGraphPass/CallGraphPass.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8502304">
@@ -482,38 +484,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BST.h">
+    <entry file="file://$PROJECT_DIR$/linked_list.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="21" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
-          <folding />
+        <state vertical-scroll-proportion="1.5061729">
+          <caret line="110" column="0" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
+          <folding>
+            <element signature="e#1503#1512#0" expanded="true" />
+            <element signature="e#1884#1893#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/red_black_tree.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="1.7558299">
           <caret line="197" column="13" selection-start-line="197" selection-start-column="13" selection-end-line="197" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.cxx">
+    <entry file="file://$PROJECT_DIR$/trie.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="45" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
+        <state vertical-scroll-proportion="1.3950617">
+          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/linked_list.h">
+    <entry file="file://$PROJECT_DIR$/BST.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17283951">
-          <caret line="95" column="5" selection-start-line="95" selection-start-column="5" selection-end-line="95" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="356" column="12" selection-start-line="356" selection-start-column="12" selection-end-line="356" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/heap.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="49" column="39" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
           <folding>
-            <element signature="e#1503#1512#0" expanded="true" />
-            <element signature="e#1884#1893#0" expanded="true" />
+            <element signature="e#29#38#0" expanded="true" />
+            <element signature="e#487#496#0" expanded="true" />
+            <element signature="e#641#650#0" expanded="true" />
+            <element signature="e#1014#1023#0" expanded="true" />
+            <element signature="e#1184#1193#0" expanded="true" />
+            <element signature="e#2115#2124#0" expanded="true" />
+            <element signature="e#2185#2194#0" expanded="true" />
+            <element signature="e#2312#2321#0" expanded="true" />
+            <element signature="e#2656#2665#0" expanded="true" />
+            <element signature="e#2772#2781#0" expanded="true" />
+            <element signature="e#2888#2897#0" expanded="true" />
+            <element signature="e#2975#2984#0" expanded="true" />
+            <element signature="e#3064#3073#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cxx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6296296">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
